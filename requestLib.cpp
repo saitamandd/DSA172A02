@@ -22,15 +22,15 @@ void loadRequests(char* fName, L1List<VRequest> &rList) {
             /// On Windows, lines on file ends with \r\n. So you have to remove \r
             if (line[line.length() - 1] == '\r')
                 line.erase(line.length() - 1);
-            if (line == "") continue;
+            if (line.length() < 1) continue;
 
             istringstream iss(line);
             while (iss) {
                 string sub;
                 iss >> sub;
                 if (sub.length()) {
-                    VRequest __r(sub);
-                    rList.insertHead(__r);
+                    if (sub.back() == ';') sub.pop_back();
+                    rList.insertHead(VRequest(sub));
                 }
             }
         }

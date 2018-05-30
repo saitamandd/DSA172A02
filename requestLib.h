@@ -24,14 +24,16 @@
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 
-#define REQUEST_CODE_SIZE     16
+#define REQUEST_CODE_SIZE     64
+#define MAX_PARAM_SIZE         6
 using namespace std;
 
 struct VRequest {
     char        code[REQUEST_CODE_SIZE];
+    double      params[MAX_PARAM_SIZE];
 
     VRequest() {
-        code[0] = '0';
+        *code   = '0';// default event is "0"
         code[1] = 0;
     }
     VRequest(char* str) {
@@ -40,14 +42,21 @@ struct VRequest {
     VRequest(string& str) {
         strncpy(code, str.data(), REQUEST_CODE_SIZE - 1);
     }
-    VRequest(VRequest& a) {
+    VRequest(VRequest& a) { // copy constructor
         memcpy(code, a.code, REQUEST_CODE_SIZE);
-    }
-    VRequest(VRequest&& a) {
-        memcpy(code, a.code, REQUEST_CODE_SIZE);
+        memcpy(params, a.params, MAX_PARAM_SIZE * sizeof(double));
     }
 
-    bool operator==(VRequest& b) {
+    VRequest(VRequest&& a) { // move constructor
+        int i = 0;
+        while(a.code[i]) {
+            code[i] = a.code[i];
+            i++;
+        }
+        code[i] = 0;
+    }
+
+    bool operator==(VRequest &b) {
         return strcmp(code, b.code) == 0;
     }
 };

@@ -58,15 +58,15 @@ Các yêu cầu có thể được xử lý trên database.
 
 | Mã | Mô tả |
 | ---------- | ------- |
-| CYR`ID`_`Ry`_`dy`           | Kiểm tra thiết bị `ID` có đi qua vị trí `R` trên trục `y` không |
-| CXR`ID`_`Rx`_`dx`           | Kiểm tra thiết bị `ID` có đi qua vị trí `R` trên trục `x` không |
-| NYR`ID`_`Ry`_`dy`           | Tìm số lượng record của thiết bị `ID` ở gần vị trí `R` trên trục `y` |
-| NXR`ID`_`Rx`_`dx`           | Tìm số lượng record của thiết bị `ID` ở gần vị trí `R` trên trục `x` |
-| NPR`ID`_`Ry`_`Rx`_`dy`_`dx` | Tìm số lần thiết bị `ID` đi qua vị trí `R`|
-| NVR_`Ry`_`Rx`_`dy`_`dx`     | Tìm số thiết bị có hành trình đi qua vị trí `R` |
-| NRR_`Ry`_`Rx`_`dy`_`dx`     | Tìm số record nằm gần vị trí `R` |
-| CVP`ID`_`Ry`_`Rx`_`dy`_`dx` | Kiểm tra xem thiết bị `ID` có hành trình đi qua vị trí `R` không|
-| NRP`ID`_`Ry`_`Rx`_`dy`_`dx` | Tìm số lượng record của thiết bị `ID` nằm gần vị trí `R` |
+| CYR`ID`\_`Ry`\_`dy`           | Kiểm tra thiết bị `ID` có đi qua vị trí `R` trên trục `y` không |
+| CXR`ID`\_`Rx`\_`dx`           | Kiểm tra thiết bị `ID` có đi qua vị trí `R` trên trục `x` không |
+| NYR`ID`\_`Ry`\_`dy`           | Tìm số lượng record của thiết bị `ID` ở gần vị trí `R` trên trục `y` |
+| NXR`ID`\_`Rx`\_`dx`           | Tìm số lượng record của thiết bị `ID` ở gần vị trí `R` trên trục `x` |
+| NPR`ID`\_`Ry`\_`Rx`\_`dy`\_`dx` | Tìm số lần thiết bị `ID` đi qua vị trí `R`|
+| NVR\_`Ry`\_`Rx`\_`dy`\_`dx`     | Tìm số thiết bị có hành trình đi qua vị trí `R` |
+| NRR\_`Ry`\_`Rx`\_`dy`\_`dx`     | Tìm số record nằm gần vị trí `R` |
+| CVP`ID`\_`Ry`\_`Rx`\_`dy`\_`dx` | Kiểm tra xem thiết bị `ID` có hành trình đi qua vị trí `R` không|
+| NRP`ID`\_`Ry`\_`Rx`\_`dy`\_`dx` | Tìm số lượng record của thiết bị `ID` nằm gần vị trí `R` |
 
 **Lưu ý: nếu có nhiều kết quả có thể trả về thì chọn kết quả đầu tiên theo thứ tự lưu 
 trong dữ liệu đầu vào.**
